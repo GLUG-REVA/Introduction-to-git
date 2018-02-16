@@ -25,7 +25,14 @@ def prime():
         print(str(num) + " is a Prime number.")
 
 
-ls = ["1. Print Hello", "2. Fibonacci Series", "3. Prime Numbers"]
+def factorial():
+    product = 1
+    num = int(input("Enter the number to print factorial: "))
+    for i in range(2, num + 1):
+        product *= i
+    print("Factorial: " + str(product))
+
+ls = ["1. Print Hello", "2. Fibonacci Series", "3. Prime Numbers", "4. Factorial of a number"]
 for i in ls:
     print(i)
 
@@ -39,6 +46,9 @@ elif option == '2':
 
 elif option == '3':
     prime()
+
+elif option == '4':
+    factorial()
 
 else:
     print("Invalid option, noob")
