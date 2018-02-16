@@ -25,7 +25,17 @@ def prime():
         print(str(num) + " is a Prime number.")
 
 
-ls = ["1. Print Hello", "2. Fibonacci Series", "3. Prime Numbers"]
+def tri():
+    rang = int(input("Enter the number of terms: "))
+    ls = [0, 0, 1]
+    i = 3
+    while i < rang:
+        d = ls[i - 1] + ls[i - 2] + ls[i - 3]
+        ls.append(d)
+        i += 1
+    print(ls)
+
+ls = ["1. Print Hello", "2. Fibonacci Series", "3. Prime Numbers", "4. Tribonacci Series"]
 for i in ls:
     print(i)
 
@@ -39,6 +49,9 @@ elif option == '2':
 
 elif option == '3':
     prime()
+
+elif option == '4':
+    tri()
 
 else:
     print("Invalid option, noob")
